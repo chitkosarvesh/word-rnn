@@ -6,7 +6,7 @@ workflows:
         name: "my-experiment"
         command: experiment.run_single_node
         params:
-          command: nvidia-smi
+          command: python train.py
           container: tensorflow/tensorflow:1.13.1-gpu-py3
           experimentEnv:
             EPOCHS_EVAL: 5
